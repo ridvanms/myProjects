@@ -87,6 +87,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/tailwindcss/lib/css/preflight.css",
               "src/styles.css"
             ],
             "scripts": []
