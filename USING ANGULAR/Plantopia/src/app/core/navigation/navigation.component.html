@@ -3,11 +3,17 @@
         <div class="upperPart">
             <a href="#" style="font-size: x-large;" >LOGO</a>
             <ul>
-                <li class="storeLocator" >
-                    <a href="#">Store Locator</a>
+                <li class="storeLocator" *ngIf="!isBrowserSizeSmall()" >
+                    <a href="#">
+                        <i>
+                            Store Locator
+                        </i>
+                        </a>
                 </li>
-                <li>
-                    <a href="#">🔍 Find Product</a>
+                <li >
+                    <a href="#">🔍 <i *ngIf="isBrowserSizeSmall()">
+                        Search
+                    </i></a>
                 </li>
                 <li>
                     <a href="#">Hello,....</a>
