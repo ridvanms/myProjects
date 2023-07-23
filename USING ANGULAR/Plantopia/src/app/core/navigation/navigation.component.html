@@ -1,7 +1,7 @@
 <header >
     <div class="nav" >
         <div class="upperPart">
-            <a href="#" style="font-size: x-large;" >LOGO</a>
+            <a href="#"  ><strong>LOGO</strong></a>
             <ul>
                 <li class="storeLocator" *ngIf="!isBrowserSizeSmall()" >
                     <a href="#">
@@ -10,17 +10,33 @@
                         </i>
                         </a>
                 </li>
-                <li >
-                    <a href="#">🔍 <i *ngIf="isBrowserSizeSmall()">
-                        Search
-                    </i></a>
+                <li  >
+                    <a href="#" style="display: flex;flex-direction: row;align-items: center;">
+                        <div style="display:flex;align-items:  center">
+                            <div style="width:1.5em;height:1.5em;margin:3px">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div *ngIf="isBrowserSizeSmall()">
+                            <i>Search</i>
+                        </div>
+                        <div  style="display: flex;flex-direction: column;" *ngIf="!isBrowserSizeSmall()" >
+                            <i>Find Product</i>
+                            <span >Quick Search</span>
+                        </div>
+                     </a>
                 </li>
                 <li>
                     <a href="#">Hello,....</a>
                     <span>My Account</span>
                 </li>
                 <li>
-                    <a style="font-size:5vh" href="#">🛒</a>
+                    <a style="font-size: x-large;" href="#">🛒</a>
                 </li>
             </ul>
         </div>
@@ -45,7 +61,7 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header color-w bg-green">
                         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Shop</h5>
-                        <button type="button"  class="color-w" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                        <button type="button"  class="color-w" data-bs-dismiss="offcanvas" aria-label="">X</button>
                     </div>
                     <div class="offcanvas-body fromShopMenu">
                         <ul>
@@ -120,8 +136,9 @@
                             
                         </ul>
                         <div class="d-flex justify-content-s-b  " style="width:100%;margin-top:2em;margin-bottom:2em">
-                            <button class="btn bg-green" style="font-size: x-large;" >My Account</button>
-                            <button class="btn btn-second" style="font-size: x-large;">Store Locator</button>
+                           <button  class="btn bg-green">My Account</button>
+                           
+                            <button class="btn btn-second">Store Locator</button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +154,13 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
                     </div>
                     <div class="offcanvas-body fromResourceMenu">
-                        <!-- NOTE content -->
+                        <div>X</div>
+                    </div>
+                    <div class="offcanvas-body fromResourceMenu">
+                        <div>Y</div>
+                    </div>
+                    <div class="offcanvas-body fromResourceMenu">
+                        <div>Z</div>
                     </div>
                 </div>
             </div>

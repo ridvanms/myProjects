@@ -24,6 +24,7 @@ header{
     margin-left:3vw;
     margin-right:3vw;
     margin-top:1.5em;
+    margin-bottom:1em;
 
     width:100%;
 }
@@ -160,9 +161,9 @@ hr{
     .inBigScreen{
         display: none;
     }
-    span{
+    /* span{
         font-size:x-small;
-    }
+    } */
     .downPart{
         height: 10vh;
     }
@@ -181,6 +182,7 @@ hr{
 .downPart a:hover{
     color:rgb(0, 1, 0);
 }
+
 }
 button{
     display: flex;
@@ -220,3 +222,26 @@ button{
 .bg-b{
     background-color: #1f1f1f;
 }
+
+.width-25{
+    transition: 1s ease-in-out;
+    width: 25em;
+}
+.position-a{
+    position: absolute
+}
+.t-0{
+    top:0
+}
+.l-0{
+    left:0
+}
+.height-100{
+    height:100%
+}
+.bg-green2{
+    background-color: rgb(13, 91, 32);
+}
+span{
+        font-size:x-small;
+    }

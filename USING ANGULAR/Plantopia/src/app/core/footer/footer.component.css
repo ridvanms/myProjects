@@ -66,3 +66,18 @@ body{
     border-color: #f9a826;
 
 }
+
+@media (max-width:1030px){
+    .infoSectionFooter {
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .infoSectionFooter p{
+        height: 3.5em;
+        align-items: center;
+    }
+    .infoSectionFooter ul li{
+    }
+    
+}

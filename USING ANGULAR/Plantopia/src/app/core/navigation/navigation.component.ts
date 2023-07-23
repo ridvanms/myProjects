@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, Host, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',

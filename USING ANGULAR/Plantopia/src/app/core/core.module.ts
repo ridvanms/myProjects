@@ -4,7 +4,7 @@ import { GlobalLoaderComponent } from './global-loader/global-loader.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
-
+import{FormsModule } from "@angular/forms"
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports:[
     GlobalLoaderComponent,
