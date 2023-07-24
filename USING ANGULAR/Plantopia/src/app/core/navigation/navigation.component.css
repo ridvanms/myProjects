@@ -36,7 +36,8 @@ header{
 .upperPart ul li{
     display: flex;
     flex-direction: column;
-    margin-right: 1vw;
+    margin: 0.5vw;
+    margin-left:1vw;
 
 }
 .storeLocator{
@@ -118,6 +119,8 @@ hr{
 
     margin-top: 1.5em;
 
+    height: 2em;
+    align-items: center;
     border-bottom: 0.1px solid grey;
 }
 
@@ -125,9 +128,43 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 50%;
 }
+.fromResourceMenu{
+    display: flex;
+    flex-direction:column;
+
+   
+}
+.fromResourceMenu ul{
+    margin: 0.5em;
+}
+.fromResourceMenu ul h1{
+    font-size: 1.5em;
+}
+.fromResourceMenu ul a{
+    
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+    height: 2em;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+
+.fromResourceMenu ul a div{
+    display: flex;
+    flex-direction: column;
+}
+
+.fromResourceMenu svg{
+    opacity: 0.5;
+}
+svg{
+    opacity: 0.5;
+}
+
 .nav hr{
     display: block;
 }
