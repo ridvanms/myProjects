@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { GlobalLoaderService } from './core/global-loader/global-loader.service';
 
 @Component({
@@ -6,17 +6,11 @@ import { GlobalLoaderService } from './core/global-loader/global-loader.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  
-  isLoading:boolean = false
-
+export class AppComponent  {
   constructor(
-    private globalLoaderService:GlobalLoaderService
-  ){}
-
-  ngOnInit(): void {
-      this.isLoading = !this.globalLoaderService.isLoading
+    public global_loader:GlobalLoaderService,
+  ){
+  
   }
-
-  //
+  
 }

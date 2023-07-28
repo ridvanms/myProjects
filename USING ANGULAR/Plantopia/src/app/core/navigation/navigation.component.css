@@ -5,10 +5,10 @@ header{
     
     /* overflow-x: hidden; */
     font-size: larger;
-
     width:100%;
 
 }
+
 .bg-common-gray {
     --tw-bg-opacity: 1;
     background-color: rgb(249 248 247 / var(--tw-bg-opacity));
@@ -282,3 +282,112 @@ button{
 span{
         font-size:x-small;
     }
+
+.logo{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    font-variant: small-caps;
+    color: rgba(24, 119, 51, 0.587);
+    cursor:pointer
+}
+/* NOTE */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+.content {
+	position: relative;
+}
+
+.content h2 {
+	color: #008000;
+    font-size: 1.5em;
+    left:2em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #008000;
+}
+
+.content h2:nth-child(2) {
+	color: #008000;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+.cartBody{
+    display: flex;
+    flex-direction: column;
+    
+    width: 95%;
+    height: 100vh;
+}
+.cartTitle {
+    font-size: larger;
+    width:100%;
+    height: 65%;
+}
+.subtotals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: smaller;
+
+    width: 100%;
+    height: 10%;
+}
+.shipping{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: smaller;
+    width: 100%;
+    height: 10%;
+}
+.cartBody input{
+    background-color: #2c542f8f;
+    border-radius: 5em;
+    width: 100%;
+    height: 3em;
+}

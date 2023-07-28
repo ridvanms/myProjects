@@ -1,14 +1,9 @@
-<div>
-    <app-navigation></app-navigation>
-    <!-- ! navigation ⬆️ -->
-    <div class="content">
-        <div *ngIf="isLoading">
-            <app-global-loader></app-global-loader>
-        </div>
-        <div *ngIf="!isLoading">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-    <!-- ! footer ⬇️ -->
-    <app-footer></app-footer>
+<app-navigation></app-navigation>
+<div *ngIf="this.global_loader.isLoading;else routerContent">
+    <app-global-loader></app-global-loader>
 </div>
+<ng-template #routerContent>
+    <router-outlet></router-outlet>
+</ng-template>
+
+<app-footer></app-footer>

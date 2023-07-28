@@ -1,7 +1,12 @@
 <header >
     <div class="nav" >
         <div class="upperPart">
-            <a href="#"  ><strong>LOGO</strong></a>
+            <a class="logo" routerLink='/'>
+                <div class="content">
+                    <h2>Plantopia</h2>
+                    <h2>Plantopia</h2>
+                </div>
+            </a>
             <ul>
                 <li class="storeLocator" *ngIf="!isBrowserSizeSmall()" >
                     <a href="#">
@@ -10,7 +15,7 @@
                         </i>
                         </a>
                 </li>
-                <li  >
+                <!-- <li  >
                     <a href="#" style="display: flex;flex-direction: row;align-items: center;">
                         <div style="display:flex;align-items:  center">
                             <div style="width:1.5em;height:1.5em;margin:3px">
@@ -30,13 +35,18 @@
                             <span >Quick Search</span>
                         </div>
                      </a>
-                </li>
+                </li> -->
                 <li *ngIf="!isBrowserSizeSmall()">
-                    <a href="#">Hello,....</a>
+                    <a routerLink="/user/account">Hello,
+                        <i *ngIf="this.authService.isAuth();else isNotAuth">{{name}}</i>
+                        <ng-template #isNotAuth>
+                            <span>SignIn</span>
+                        </ng-template>
+                    </a>
                     <span>My Account</span>
                 </li>
                 <li *ngIf="isBrowserSizeSmall()">
-                    <a href="#">
+                    <a routerLink="/user/account">
                         <div style="width: 2em;height: 2em;">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
@@ -47,7 +57,39 @@
                     </a>
                 </li>
                 <li >
-                    <a style="font-size: x-large;" href="#">🛒</a>
+                    <a style="font-size: x-large;"  >
+                        <!--  -->
+                            <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"
+                                aria-controls="offcanvasRight1">
+                                <h1>🛒</h1>
+                            </button>
+                            
+                            <div  class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel1">
+                                <div class="offcanvas-header ">
+                                    <h5 class="offcanvas-title color-w" id="offcanvasRightLabel1"></h5>
+                                    <button style="margin:1em;font-size: x-large;" type="button" class="btn btn-second" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                                </div>
+                                <div class="offcanvas-body cartBody" style="margin:1em" >
+                                    <div class="cartBody">
+                                        <div class="cartTitle">
+                                            <h1>your cart</h1>
+                                        </div>
+                                        <div class="subtotals">
+                                            <i>Subtotals:</i>
+                                            <i>Price <span>$</span></i>
+                                        </div>
+                                        <div class="shipping">
+                                            <i>Shipping:</i>
+                                            <i>Free</i>
+                                        </div>
+                                        <input type="button" value="Your Cart is Empty`" disabled="true" >
+                                        <span style="margin-top:2em;">Taxes calculated at checkout</span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        <!--  -->
+                    </a>
                 </li>
             </ul>
         </div>
@@ -71,8 +113,8 @@
                 </button>
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header  bg-green">
-                        <h5 class="offcanvas-title color-w" id="offcanvasExampleLabel">Shop</h5>
-                        <button type="button"  class="color-w" data-bs-dismiss="offcanvas" aria-label="">X</button>
+                        <h5 style="margin:1em;font-size: x-large;" class="offcanvas-title color-w" id="offcanvasExampleLabel">Shop</h5>
+                        <button style="margin:1em;font-size: x-large;" type="button"  class="color-w" data-bs-dismiss="offcanvas" aria-label="">X</button>
                     </div>
                     <div class="offcanvas-body fromShopMenu">
                         <ul>
@@ -147,9 +189,9 @@
                             
                         </ul>
                         <div class="d-flex justify-content-s-b  " style="width:100%;margin-top:2em;margin-bottom:2em">
-                           <button  class="btn bg-green">My Account</button>
+                           <button style="height:3em"  class="btn bg-green">My Account</button>
                            
-                            <button class="btn btn-second">Store Locator</button>
+                            <button style="height: 3em;" class="btn btn-second">Store Locator</button>
                         </div>
                     </div>
                 </div>
@@ -161,8 +203,8 @@
                 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header bg-green">
-                        <h5 class="offcanvas-title color-w" id="offcanvasRightLabel">Help & Resources</h5>
-                        <button type="button" class=" color-w" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                        <h5 style="margin:1em;font-size: x-large;" class="offcanvas-title color-w" id="offcanvasRightLabel">Help & Resources</h5>
+                        <button style="margin:1em;font-size: x-large;" type="button" class=" color-w" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
                     </div>
                     <div class="offcanvas-body fromResourceMenu">
                         <ul>

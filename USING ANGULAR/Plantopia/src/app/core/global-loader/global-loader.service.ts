@@ -5,8 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalLoaderService {
   isLoading:boolean = false
-
-  constructor() { }
+  constructor() {
+    
+   }
 
   showLoader(){
     this.isLoading = true

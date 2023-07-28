@@ -23,7 +23,7 @@ export class FooterComponent implements OnInit {
     if(form.valid){
       this.email = form.value.email
       // console.log(form.value.email) //printing the email of the form
-      
+      alert('You subscribed successfully')
      
     }
     form.reset();

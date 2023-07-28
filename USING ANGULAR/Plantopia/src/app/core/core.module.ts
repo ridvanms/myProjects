@@ -5,6 +5,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
 import{FormsModule } from "@angular/forms"
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import{FormsModule } from "@angular/forms"
   imports: [
     CommonModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports:[
     GlobalLoaderComponent,
