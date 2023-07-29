@@ -3,7 +3,6 @@ header{
     display: flex;
     flex-direction: column;
     
-    /* overflow-x: hidden; */
     font-size: larger;
     width:100%;
 

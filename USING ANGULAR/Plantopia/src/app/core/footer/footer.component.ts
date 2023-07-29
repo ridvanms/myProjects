@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {NgForm } from '@angular/forms';
+import { ModalService } from 'src/app/shared/modal/modal.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -16,6 +17,10 @@ export class FooterComponent implements OnInit {
   explore:Boolean = false
 
   email:string = ''
+  constructor(
+    private modalService:ModalService
+  ){}
+
   ngOnInit(): void {
     
   }
@@ -23,12 +28,19 @@ export class FooterComponent implements OnInit {
     if(form.valid){
       this.email = form.value.email
       // console.log(form.value.email) //printing the email of the form
-      alert('You subscribed successfully')
+      // alert('You subscribed successfully')
+      this.modalService.toggleModal()
+      setTimeout(()=>{
+        this.modalService.toggleModal()
+      },1200)
      
     }
     form.reset();
   }
 
+  show(){
+    return false
+  }
 
 
   toggle(name:String){
