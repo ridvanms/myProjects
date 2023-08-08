@@ -40,7 +40,7 @@
                     <a routerLink="/user/account">Hello,
                         <i *ngIf="this.authService.isAuth();else isNotAuth">{{name}}</i>
                         <ng-template #isNotAuth>
-                            <span>SignIn</span>
+                            <i>SignIn</i>
                         </ng-template>
                     </a>
                     <span>My Account</span>
@@ -138,7 +138,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <a href="#">Plant Care</a>
+                                <a routerLink="/plantGuide">Plant Guide</a>
                                 
                                 <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -208,7 +208,7 @@
                     </div>
                     <div class="offcanvas-body fromResourceMenu">
                         <ul>
-                                <h1>Plant Care</h1>
+                                <h1>Plant Guide</h1>
                                 <h1>Resources</h1>
                             
                             <li>
@@ -248,7 +248,7 @@
                             <li>
                                 <a href="#">
                                     <div>
-                                        <h5>Plant Care Library</h5>
+                                        <h5>Plant Guide Library</h5>
                                         <span>
                                             <i>Care guides for all your plants, A to Z</i>
                                         </span>
@@ -345,7 +345,7 @@
                     <li><a href="#">Deals</a></li>
                     <li><a href="#">Stores</a></li>
                     <li><a href="#">Planters</a></li>
-                    <li><a href="#">Plant Care</a></li>
+                    <li><a routerLink="plantGuide">Plant Guide</a></li>
                     <li><a href="#">Gift Ideas</a> </li>
                     <li><a href="#">Home & Decor</a></li>
                     <li><a href="#">Faux</a></li>

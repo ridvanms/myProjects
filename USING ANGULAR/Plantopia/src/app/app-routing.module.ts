@@ -14,9 +14,15 @@ const routes: Routes = [
     loadChildren : () => import('./account/account.module').then((m) => m.AccountModule)
   },
   {
+    path:'plantGuide',
+    loadChildren : () => import("./plant-guide/plant-guide.module").then(m => m.PlantGuideModule)
+  },
+  //!SECTION error page down
+  {
     path:"**",
     component:NotfountComponent
-  }
+  },
+
 ];
 
 @NgModule({

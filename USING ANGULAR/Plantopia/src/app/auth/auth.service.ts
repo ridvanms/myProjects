@@ -8,6 +8,6 @@ export class AuthService {
   constructor(private cookie:CookieService) { }
 
   isAuth(){
-    return this.cookie.get('token')?true:false
+    return !!this.cookie.get('token')
   }
 }

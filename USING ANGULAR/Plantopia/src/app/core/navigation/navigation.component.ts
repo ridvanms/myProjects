@@ -1,4 +1,4 @@
-import { Component,  HostListener } from '@angular/core';
+import { AfterViewChecked, Component,  HostListener, OnChanges } from '@angular/core';
 import { GlobalLoaderService } from '../global-loader/global-loader.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import {CookieService} from "ngx-cookie-service"
@@ -7,7 +7,7 @@ import {CookieService} from "ngx-cookie-service"
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent  {
+export class NavigationComponent implements AfterViewChecked {
   name:string = ''
   isBrowserSizeSmall():Boolean {
     return window.innerWidth <= 1030;
@@ -16,9 +16,10 @@ export class NavigationComponent  {
     public global_loader:GlobalLoaderService,
     public authService:AuthService,
     private cookie:CookieService
-  ){
-    this.name = this.cookie.get('token')
-  }
+  ){}
+ ngAfterViewChecked(): void {
+     this.name = this.cookie.get('token')
+ }
   
   @HostListener("window:resize",['$event'])
   onResize():void{

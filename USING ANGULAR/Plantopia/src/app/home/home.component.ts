@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
     this.homeService.getAllSpecies().subscribe({
       next:(response)=>{
         this.species = response
-        console.log(this.species[0])
       },
       error:(error)=>{alert(error.message)}
     })

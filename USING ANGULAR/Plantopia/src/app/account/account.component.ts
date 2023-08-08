@@ -25,6 +25,6 @@ export class AccountComponent implements OnInit {
   }
   onLogOut(){
     this.cookie.delete('token')
-    this.router.navigate(['/user/login'])
+    this.router.navigate(['/'])
   }
 }

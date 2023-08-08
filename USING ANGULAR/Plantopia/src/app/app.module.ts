@@ -15,10 +15,12 @@ import { NotfountComponent } from './notfount/notfount.component';
 import { ModalService } from './shared/modal/modal.service';
 import {HttpClientModule} from "@angular/common/http"
 import { HomeModule } from './home/home.module';
+import { PlantGuideModule } from './plant-guide/plant-guide.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NotfountComponent
+    NotfountComponent,
+    
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    PlantGuideModule
   ],
   providers: [
     AuthService,
