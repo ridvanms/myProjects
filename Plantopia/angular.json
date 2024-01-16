@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "node_modules/tailwindcss/lib/css/preflight.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
@@ -102,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c7aac53d-b674-46a5-933e-b123aeb56f39"
   }
 }
